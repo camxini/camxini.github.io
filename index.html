@@ -2,8 +2,8 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>我的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的个人网站</title>
   <style>
     :root {
       --bg: #e8e6e1;
@@ -12,97 +12,120 @@
       --highlight: #9ca3af; /* 莫兰迪灰蓝 */
     }
 
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+    html, body {
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      scroll-behavior: smooth;
+      font-family: "Helvetica Neue", sans-serif;
+      overflow-x: hidden;
     }
 
-    header {
-      background-color: var(--accent);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
+    body {
+      scroll-snap-type: y mandatory;
+      height: 100vh;
     }
 
     section {
-      margin-bottom: 3rem;
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      box-sizing: border-box;
     }
 
-    h2 {
-      color: var(--highlight);
-      border-bottom: 1px solid var(--highlight);
-      padding-bottom: 0.5rem;
+    h1, h2 {
+      margin: 0.5rem 0;
     }
 
-    footer {
+    p {
+      max-width: 600px;
       text-align: center;
-      padding: 2rem 1rem;
+    }
+
+    section:nth-child(1) {
       background-color: var(--accent);
       color: white;
     }
 
-    a {
-      color: var(--accent);
+    section:nth-child(2) {
+      background-color: var(--bg);
+      color: var(--text);
     }
 
-    @media (max-width: 600px) {
-      header, footer {
-        padding: 1.5rem 1rem;
+    section:nth-child(3) {
+      background-color: var(--highlight);
+      color: white;
+    }
+
+    footer {
+      background-color: #555;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* ❄️ 雪花动画 */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      pointer-events: none;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
       }
     }
+
+    /* ⛄ 生成多片雪花 */
   </style>
 </head>
 <body>
 
-  <header>
+  <!-- ❄️ 雪花元素（可以复制多个） -->
+  <script>
+    // 纯 JS 添加雪花，保持简洁性
+    for (let i = 0; i < 50; i++) {
+      const snowflake = document.createElement('div');
+      snowflake.className = 'snowflake';
+      snowflake.textContent = '❄';
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+      snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      document.body.appendChild(snowflake);
+    }
+  </script>
+
+  <!-- 🎯 页面结构 -->
+  <section>
     <h1>你好，我是 [你的名字]</h1>
-    <nav>
-      <a href="#about">关于我</a>
-      <a href="#projects">项目</a>
-      <a href="#contact">联系</a>
-    </nav>
-  </header>
+    <p>欢迎来到我的个人网站。请向下滑动探索更多内容。</p>
+  </section>
 
-  <main>
-    <section id="about">
-      <h2>关于我</h2>
-      <p>我是一名热爱技术与设计的开发者，关注前端、机器人与生活的平衡。</p>
-    </section>
+  <section>
+    <h2>关于我</h2>
+    <p>我是一名热爱简约美学和技术结合的创作者，擅长构建前端界面与嵌入式系统。</p>
+  </section>
 
-    <section id="projects">
-      <h2>项目展示</h2>
-      <ul>
-        <li><strong>项目A：</strong> 使用树莓派与ROS构建的自动小车</li>
-        <li><strong>项目B：</strong> 城市可持续发展调研平台</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>联系我</h2>
-      <p>邮箱：yourname@example.com</p>
-      <p>GitHub：<a href="https://github.com/yourname">github.com/yourname</a></p>
-    </section>
-  </main>
+  <section>
+    <h2>项目展示</h2>
+    <p>🌱 ROS小车 | 📊 城市调研平台 | 🖥️ 个人博客</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 [你的名字] | 简约莫兰迪风设计</p>
+    <p>© 2025 [你的名字] | 简约设计 + 雪花特效</p>
   </footer>
 
 </body>
