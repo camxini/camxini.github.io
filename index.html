@@ -1,197 +1,48 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>个人介绍网站</title>
-<style>
-  /* 基础重置 */
-  * { margin:0; padding:0; box-sizing: border-box; }
-  body {
-    font-family: 'Helvetica Neue', sans-serif;
-    color: #3a4a59;
-    background: #d6dce5; /* 莫兰迪冷色背景 */
-    overflow-x: hidden;
-  }
-  header {
-    position: fixed;
-    width: 100%;
-    background: rgba(211, 219, 227, 0.85);
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  nav a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: #3a4a59;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: #819bbd;
-  }
-
-  main {
-    padding-top: 60px; /* 顶部留导航栏空间 */
-  }
-  section {
-    min-height: 100vh;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  /* 介绍页背景层 */
-  #intro {
-    position: relative;
-    color: #3a4a59;
-    overflow: hidden;
-    background: #d6dce5;
-  }
-  #intro .background {
-    position: absolute;
-    top: -20%;
-    left: -20%;
-    width: 140%;
-    height: 140%;
-    background: radial-gradient(circle at center, #b5c3cd, #a2b2bd);
-    transition: transform 0.2s ease-out;
-    z-index: 0;
-  }
-  #intro .content {
-    position: relative;
-    z-index: 1;
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
-  }
-  #intro h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  #intro p {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: #4a5a69;
-  }
-
-  /* 作品页布局 */
-  #works {
-    background: #c9d6df;
-  }
-  .work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 1.5rem;
-  }
-  .work-card {
-    background: #a2b2bd;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .work-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-  }
-  .work-card h3 {
-    margin-bottom: 0.5rem;
-  }
-  .work-card p {
-    font-size: 0.9rem;
-    line-height: 1.3;
-  }
-
-  /* 联系方式 */
-  #contact {
-    background: #b5c3cd;
-    text-align: center;
-  }
-  .contact-icons {
-    margin-top: 2rem;
-  }
-  .contact-icons a {
-    margin: 0 1rem;
-    display: inline-block;
-    font-size: 2.5rem;
-    color: #3a4a59;
-    transition: color 0.3s;
-    text-decoration: none;
-  }
-  .contact-icons a:hover {
-    color: #819bbd;
-  }
-
-</style>
+  <meta charset="UTF-8">
+  <title>个人网站</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="language-toggle">
+    <button onclick="toggleLanguage()">中文 / English</button>
+  </div>
 
-<header>
-  <nav>
-    <a href="#intro">介绍</a>
-    <a href="#works">作品</a>
-    <a href="#contact">联系方式</a>
-  </nav>
-</header>
-
-<main>
-  <section id="intro">
-    <div class="background"></div>
-    <div class="content">
-      <h1>你好，我是 Camxini</h1>
-      <p>欢迎来到我的个人网站，这里展示我的介绍、作品和联系方式。</p>
+  <div class="container">
+    <div class="sidebar">
+      <h1 id="name">Your Name</h1>
+      <p id="contact">Email: you@example.com</p>
+      <p>GitHub: <a href="#">github.com/yourprofile</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+      <!-- 你可以继续添加联系方式 -->
     </div>
-  </section>
 
-  <section id="works">
-    <h2>我的作品</h2>
-    <div class="work-grid">
-      <div class="work-card" onclick="window.open('https://github.com/camxini/project1', '_blank')">
-        <h3>项目1</h3>
-        <p>一个有趣的项目描述。</p>
+    <div class="main-content">
+      <div class="menu">
+        <button onclick="showSection('about')">关于 / About</button>
+        <button onclick="showSection('projects')">项目 / Projects</button>
+        <button onclick="showSection('contact')">联系 / Contact</button>
       </div>
-      <div class="work-card" onclick="window.open('https://github.com/camxini/project2', '_blank')">
-        <h3>项目2</h3>
-        <p>另一个精彩的项目展示。</p>
+
+      <div class="section" id="about">
+        <h2>关于我 / About Me</h2>
+        <p>这里是关于我个人的信息。</p>
       </div>
-      <div class="work-card" onclick="window.open('https://github.com/camxini/project3', '_blank')">
-        <h3>项目3</h3>
-        <p>更多内容，敬请期待。</p>
+
+      <div class="section" id="projects" style="display:none;">
+        <h2>项目 / Projects</h2>
+        <p>这里是你做过的一些项目介绍。</p>
+      </div>
+
+      <div class="section" id="contact" style="display:none;">
+        <h2>联系 / Contact</h2>
+        <p>这里是进一步的联系方式。</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="contact">
-    <h2>联系方式</h2>
-    <div class="contact-icons">
-      <a href="mailto:your.email@example.com" title="发送邮件" target="_blank" rel="noopener">📧</a>
-      <a href="https://github.com/camxini" title="GitHub" target="_blank" rel="noopener">🐱</a>
-      <a href="https://twitter.com/yourprofile" title="Twitter" target="_blank" rel="noopener">🐦</a>
-      <a href="https://weibo.com/yourprofile" title="微博" target="_blank" rel="noopener">微博</a>
-    </div>
-  </section>
-</main>
-
-<script>
-  // 鼠标移动反向移动背景
-  const introBg = document.querySelector('#intro .background');
-  window.addEventListener('mousemove', e => {
-    const x = e.clientX / window.innerWidth;
-    const y = e.clientY / window.innerHeight;
-    // 反向移动，移动幅度可调节
-    const moveX = (0.5 - x) * 30;
-    const moveY = (0.5 - y) * 30;
-    introBg.style.transform = `translate(${moveX}px, ${moveY}px)`;
-  });
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
