@@ -20,9 +20,9 @@ body {
 
 /* 图标设置 */
 .icon {
-  height: 1em;           /* 图标高度 = 当前字体大小 */
+  height: 1.2em;           /* 图标高度 = 当前字体大小 */
   vertical-align: middle; /* 垂直居中对齐文本 */
-  margin-right: 5px;      /* 图标和文字之间留点空隙 */
+  margin-right: 20px;      /* 图标和文字之间留点空隙 */
 }
 
 /* 左侧栏（默认横向放左边） */
