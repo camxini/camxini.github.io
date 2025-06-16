@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: white;
+}
+
+.language-toggle {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: black;
+  color: white;
+  width: 250px;
+  padding: 20px;
+}
+
+.sidebar a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.menu {
+  margin-bottom: 20px;
+}
+
+.menu button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
