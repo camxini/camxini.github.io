@@ -20,7 +20,7 @@ body {
 
 /* 图标设置 */
 .icon {
-  height: 1.4em;           /* 图标高度 = 当前字体大小 */
+  height: 1.2em;           /* 图标高度 = 当前字体大小 */
   vertical-align: middle; /* 垂直居中对齐文本 */
   margin-right: 20px;      /* 图标和文字之间留点空隙 */
 }
@@ -54,4 +54,40 @@ body {
   margin-right: 10px;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+/* 语言切换按钮 */
+.language-toggle {
+  position: fixed;
+  top: 30px;
+  right: 25px;
+  z-index: 10;
+}
+
+.language-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* 隐藏下拉菜单 */
+.language-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.language-menu div {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.language-menu div:hover {
+  background-color: #f0f0f0;
 }

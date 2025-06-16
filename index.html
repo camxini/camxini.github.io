@@ -6,17 +6,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="language-toggle">
-    <button onclick="toggleLanguage()">简体中文 / English</button>
+  <div class="language-toggle" id="langToggle">
+    <img src="src/language.png" alt="Language" class="language-icon">
+    <div class="language-menu" id="langMenu">
+      <div onclick="setLanguage('zh')">简体中文</div>
+      <div onclick="setLanguage('en')">English</div>
+    </div>
   </div>
+
 
   <div class="container">
     <div class="sidebar">
       <h1 id="name">Yang Jiaxin</h1>
-      <p id="contact"><img src="src/mail.png" alt="mail" class="icon">chamxine@163.com</p>
-      <p>Tel: +86 17300982876</p>
-      <p>GitHub: <a href="#">github.com/camxini</a></p>
-      <p>Wechat: cam_fh</p>
+      <p><img src="src/mail.png" alt="mail" class="icon">chamxine@163.com</p>
+      <p><img src="src/phone.png" alt="phone" class="icon">+86 173 0098 2876</p>
+      <p><img src="src/github.png" alt="github" class="icon"><a href="#">github.com/camxini</a></p>
+      <p><img src="src/wechat.png" alt="wechat" class="icon">cam_fh</p>
       <!-- 你可以继续添加联系方式 -->
     </div>
 
