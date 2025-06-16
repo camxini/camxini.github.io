@@ -36,7 +36,8 @@ function setLanguage(lang) {
   currentLang = lang;
 
   if (lang === 'zh') {
-    document.getElementById('name').textContent = '杨佳昕';
+    document.getElementById('title').textContent = '我的主页';
+    document.getElementById('user_text').textContent = '杨佳昕';
     document.getElementById('btn-about').textContent = '关于';
     document.getElementById('btn-projects').textContent = '项目';
     document.getElementById('btn-contact').textContent = '联系';
@@ -52,7 +53,8 @@ function setLanguage(lang) {
     document.getElementById('download-cv').querySelector('a').textContent = '下载简历';
     document.getElementById('last-updated').textContent = '最后更新于 ' + lastUpdatedDate.zh;
   } else {
-    document.getElementById('name').textContent = 'Yang Jiaxin';
+    document.getElementById('title').textContent = 'My Homepage';
+    document.getElementById('user_text').textContent = 'Jiaxin Yang';
     document.getElementById('btn-about').textContent = 'About';
     document.getElementById('btn-projects').textContent = 'Projects';
     document.getElementById('btn-contact').textContent = 'Contact';
