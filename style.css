@@ -22,7 +22,7 @@ body {
 .sidebar {
   background-color: black;
   color: white;
-  width: 250px;
+  width: 400px;
   padding: 20px;
   flex-shrink: 0;
 }
@@ -47,24 +47,4 @@ body {
   margin-right: 10px;
   padding: 10px 20px;
   cursor: pointer;
-}
-
-/* ✅ 响应式：手机或窄屏幕下的样式 */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* 改成上下布局 */
-  }
-
-  .sidebar {
-    width: 100%; /* 宽度占满顶部 */
-  }
-
-  .main-content {
-    padding: 15px;
-  }
-
-  .menu button {
-    margin: 5px 5px 5px 0;
-    width: 100%; /* 手机按钮每行一个 */
-  }
 }
