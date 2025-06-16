@@ -33,7 +33,7 @@ body {
   padding: 20px;
   background-color: black;
   color: white;
-  width: 400px;
+  width: 300px;
   position: fixed;
 }
 
@@ -80,6 +80,7 @@ body {
 .main-content {
   flex-grow: 1;
   padding: 20px;
+  margin-left: 400px;
 }
 
 /* 菜单按钮组 */
