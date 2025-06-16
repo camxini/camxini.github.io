@@ -34,6 +34,7 @@ body {
   background-color: black;
   color: white;
   width: 400px;
+  position: fixed;
 }
 
 .sidebar a {
@@ -66,6 +67,14 @@ body {
 #download-cv a:hover {
   text-decoration: underline;
 }
+
+#last-updated {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+  display: inline-block;
+}
+
 
 /* 右侧主内容 */
 .main-content {
