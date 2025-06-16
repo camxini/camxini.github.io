@@ -1,3 +1,4 @@
+/* 全局样式 */
 body {
   margin: 0;
   font-family: sans-serif;
@@ -8,18 +9,22 @@ body {
   position: fixed;
   top: 10px;
   right: 20px;
+  z-index: 10;
 }
 
 .container {
   display: flex;
   min-height: 100vh;
+  flex-direction: row; /* 默认是横向 */
 }
 
+/* 左侧栏（默认横向放左边） */
 .sidebar {
   background-color: black;
   color: white;
   width: 250px;
   padding: 20px;
+  flex-shrink: 0;
 }
 
 .sidebar a {
@@ -27,11 +32,13 @@ body {
   text-decoration: none;
 }
 
+/* 右侧主内容 */
 .main-content {
   flex-grow: 1;
   padding: 20px;
 }
 
+/* 菜单按钮组 */
 .menu {
   margin-bottom: 20px;
 }
@@ -40,4 +47,24 @@ body {
   margin-right: 10px;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+/* ✅ 响应式：手机或窄屏幕下的样式 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* 改成上下布局 */
+  }
+
+  .sidebar {
+    width: 100%; /* 宽度占满顶部 */
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .menu button {
+    margin: 5px 5px 5px 0;
+    width: 100%; /* 手机按钮每行一个 */
+  }
 }
