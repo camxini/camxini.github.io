@@ -17,19 +17,22 @@
 
   <div class="container">
     <div class="sidebar">
-      <h1 id="name">Yang Jiaxin</h1>
-      <p><img src="src/mail.png" alt="mail" class="icon">chamxine@163.com</p>
-      <p><img src="src/phone.png" alt="phone" class="icon">+86 173 0098 2876</p>
-      <p><img src="src/github.png" alt="github" class="icon"><a href="#">github.com/camxini</a></p>
-      <p><img src="src/wechat.png" alt="wechat" class="icon">cam_fh</p>
-      <!-- 你可以继续添加联系方式 -->
-    </div>
+      <div class="sidebar-content">
+        <h1 id="name">Yang Jiaxin</h1>
+        <p><img src="src/mail.png" alt="mail" class="icon">chamxine@163.com</p>
+        <p><img src="src/phone.png" alt="phone" class="icon">+86 173 0098 2876</p>
+        <p><img src="src/github.png" alt="github" class="icon"><a href="#">github.com/camxini</a></p>
+        <p><img src="src/wechat.png" alt="wechat" class="icon">cam_fh</p>
+      </div>
+
+    <p id="download-cv"><a href="src/cv.pdf" download>Download CV</a></p>
+  </div>
 
     <div class="main-content">
       <div class="menu">
-        <button onclick="showSection('about')">关于 / About</button>
-        <button onclick="showSection('projects')">项目 / Projects</button>
-        <button onclick="showSection('contact')">联系 / Contact</button>
+        <button onclick="showSection('about')" id="btn-about">About</button>
+        <button onclick="showSection('projects')" id="btn-projects">Projects</button>
+        <button onclick="showSection('contact')" id="btn-contact">Contact</button>
       </div>
 
       <div class="section" id="about">

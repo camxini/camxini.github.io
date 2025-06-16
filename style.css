@@ -27,16 +27,44 @@ body {
 
 /* 左侧栏（默认横向放左边） */
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;  /* 使侧边栏高度撑满视口 */
+  padding: 20px;
   background-color: black;
   color: white;
   width: 400px;
-  padding: 20px;
-  flex-shrink: 0;
 }
 
 .sidebar a {
-  color: lightblue;
-  text-decoration: none;
+  color: white;
+  text-decoration: underline;
+}
+
+.sidebar > *:not(#download-cv) {
+  /* 其他内容正常排列 */
+  margin-bottom: 15px;
+}
+
+/* 让中间内容自动占满剩余高度 */
+.sidebar-content {
+  flex: 1;
+}
+
+/* 下载CV固定底部 */
+#download-cv {
+  margin-top: auto; /* 推到最底部 */
+  font-weight: bold;
+  margin-bottom: 40px; /* 底部留出空间 */
+}
+
+#download-cv a {
+  color: white;
+  text-decoration: underline;
+}
+
+#download-cv a:hover {
+  text-decoration: underline;
 }
 
 /* 右侧主内容 */
@@ -46,14 +74,19 @@ body {
 }
 
 /* 菜单按钮组 */
-.menu {
-  margin-bottom: 20px;
-}
-
 .menu button {
-  margin-right: 10px;
+  background-color: white;
+  border: none;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 16px; /* 可以调节大小 */
+  color: black;    /* 字体颜色改成黑色，更清晰 */
+  border-radius: 4px; /* 可选，按钮圆角 */
+  transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+  background-color: white; /* 悬停时稍微变灰，提示交互 */
 }
 
 /* 语言切换按钮 */
