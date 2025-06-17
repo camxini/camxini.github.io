@@ -88,6 +88,7 @@ function setLanguage(lang) {
   document.getElementById('contact-p5').textContent = lang === 'zh'
     ? '中国 浙江省 杭州市 西湖区 浙江大学玉泉校区 浙江大学控制科学与工程学院'
     : 'College of Control Science and Engineering, Yuquan Campus, Zhejiang University, Hangzhou, Zhejiang, China';
+  document.getElementById('contact-p5.1').textContent = lang === 'zh' ? '邮政编码：310027' : 'Postcode: 310027';
   document.getElementById('contact-h3').textContent = lang === 'zh' ? '联系电话' : 'Phone Number';
   document.getElementById('contact-p6').textContent = '+86 173 0098 2876';
   document.getElementById('contact-p7').textContent = lang === 'zh'
