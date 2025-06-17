@@ -35,99 +35,76 @@ let currentLang = 'en';
 function setLanguage(lang) {
   currentLang = lang;
 
-  if (lang === 'zh') {
-    document.getElementById('title').textContent = '我的主页';
-    document.getElementById('user_text').textContent = '杨佳昕';
-    document.getElementById('btn-about').textContent = '关于';
-    document.getElementById('btn-projects').textContent = '项目';
-    document.getElementById('btn-skills').textContent = '技能';
-    document.getElementById('btn-download').textContent = '下载';
-    document.getElementById('btn-contact').textContent = '联系';
+  // 公共内容
+  document.getElementById('title').textContent = lang === 'zh' ? '我的主页' : 'My Homepage';
+  document.getElementById('user_text').textContent = lang === 'zh' ? '杨佳昕' : 'Jiaxin Yang';
+  document.getElementById('btn-about').textContent = lang === 'zh' ? '关于' : 'About';
+  document.getElementById('btn-projects').textContent = lang === 'zh' ? '项目' : 'Projects';
+  document.getElementById('btn-skills').textContent = lang === 'zh' ? '技能' : 'Skills';
+  document.getElementById('btn-download').textContent = lang === 'zh' ? '下载' : 'Download';
+  document.getElementById('btn-contact').textContent = lang === 'zh' ? '联系' : 'Contact';
 
-    document.getElementById('about').querySelector('h2').textContent = '关于我';
-    document.getElementById('about').querySelector('p').textContent = '这里是关于我个人的信息。';
+  // About
+  document.querySelector('#about h2').textContent = lang === 'zh' ? '关于我' : 'About Me';
+  document.querySelector('#about p').textContent = lang === 'zh' ? '这里是关于我个人的信息。' : 'This is information about me.';
 
-    document.getElementById('projects').querySelector('h2').textContent = '项目';
-    document.getElementById('projects').querySelector('p').textContent = '这里是你做过的一些项目介绍。';
+  // Projects
+  document.querySelector('#projects h2').textContent = lang === 'zh' ? '项目' : 'Projects';
+  document.querySelector('#projects p').textContent = lang === 'zh' ? '这里是你做过的一些项目介绍。' : 'Here are some projects I have done.';
 
-    document.getElementById('skills').querySelector('h2').textContent = '技能';
-    document.getElementById('skills').querySelector('p').textContent = '这里是我的技能介绍。';
+  // Skills
+  document.querySelector('#skills h2').textContent = lang === 'zh' ? '技能' : 'Skills';
+  document.querySelector('#skills p').textContent = lang === 'zh' ? '这里是我的技能介绍。' : 'This is a description of my skills.';
 
-    document.getElementById('download').querySelector('h2').textContent = '下载';
-    document.getElementById('download').querySelector('p').textContent = '可以在这里下载与我相关的文件。';
-    document.getElementById('download-personal-use').textContent = '请注意，所有下载的文件仅供个人使用，未经允许不得用于商业目的。';
-    document.getElementById('download-privacy').textContent = '涉及隐私信息的部分已被隐藏。如需完整版文件，请联系我。';
-    document.getElementById('download-cv-pdf').querySelector('a').textContent = '(PDF) 简历';
-    document.getElementById('download-cv-tex').querySelector('a').textContent = '(LaTeX) 简历';
-    document.getElementById('download-ielts').querySelector('a').textContent = '(PDF) 雅思成绩单扫描件';
-    document.getElementById('download-academic-report').querySelector('a').textContent = '(PDF) 成绩单扫描件';
+  // Download
+  document.querySelector('#download h2').textContent = lang === 'zh' ? '下载' : 'Download';
+  document.querySelector('#download > p').textContent = lang === 'zh'
+    ? '可以在这里下载与我相关的文件。'
+    : 'You can download files related to me here.';
+  document.getElementById('download-personal-use').textContent = lang === 'zh'
+    ? '请注意，所有下载的文件仅供个人使用，未经允许不得用于商业目的。'
+    : 'All downloaded files are for personal use only, and should not be used for commercial purposes without permission.';
+  document.getElementById('download-privacy').textContent = lang === 'zh'
+    ? '涉及隐私信息的部分已被隐藏。如需完整版文件，请联系我。'
+    : 'Some parts containing private information have been hidden. If you need the full version of the files, please contact me.';
+  document.querySelector('#download-cv-pdf a').textContent = lang === 'zh' ? '(PDF) 简历' : '(PDF) CV';
+  document.querySelector('#download-cv-tex a').textContent = lang === 'zh' ? '(LaTeX) 简历' : '(LaTeX) CV';
+  document.querySelector('#download-ielts a').textContent = lang === 'zh' ? '(PDF) 雅思成绩单扫描件' : '(PDF) Scanned Copy of IELTS Score Report';
+  document.querySelector('#download-academic-report a').textContent = lang === 'zh' ? '(PDF) 成绩单扫描件' : '(PDF) Scanned Copy of Academic Report';
 
-    document.getElementById('contact').querySelector('h2').textContent = '联系';
-    document.getElementById('contact').querySelector('p').textContent = '这里是进一步的联系方式。';
-    document.getElementById('contact-h1').textContent = '邮件';
-    document.getElementById('contact-p1').textContent = 'chamxine@163.com（建议）';
-    document.getElementById('contact-p2').textContent = 'chamxine@gmail.com';
-    document.getElementById('contact-p3').textContent = '邮件大约需要一天的回复时间，请耐心等待。';
-    document.getElementById('contact-h2').textContent = '寄送地址';
-    document.getElementById('contact-p4').textContent = '如果需要邮寄材料，请使用以下地址：';
-    document.getElementById('contact-p5').textContent = '中国 浙江省 杭州市 西湖区 浙江大学玉泉校区 浙江大学控制科学与工程学院';
-    document.getElementById('contact-h3').textContent = '联系电话';
-    document.getElementById('contact-p6').textContent = '+86 173 0098 2876';
-    document.getElementById('contact-p7').textContent = '欢迎您在工作日的 9:00-21:00 (GMT+8)与我联系。';
-    document.getElementById('contact-p8').textContent = '如果您不是中国大陆的电话号码，电话可能会被拒接。请您再次拨打以示来意。';
-    document.getElementById('contact-h4').textContent = '社交媒体';
-    document.getElementById('contact-p9').textContent = '微信号：cam_fh';
-    document.getElementById('contact-p10').textContent = '除微信以外的任何社交媒体联系方式（包括Github）不会被接受或暂未注册。';
+  // Contact
+  document.querySelector('#contact h2').textContent = lang === 'zh' ? '联系' : 'Contact';
+  document.querySelector('#contact > p').textContent = lang === 'zh' ? '这里是进一步的联系方式。' : 'This is further contact info.';
+  document.getElementById('contact-h1').textContent = lang === 'zh' ? '邮件' : 'Email';
+  document.getElementById('contact-p1').textContent = lang === 'zh' ? 'chamxine@163.com（建议）' : 'chamxine@163.com (recommended)';
+  document.getElementById('contact-p2').textContent = 'chamxine@gmail.com';
+  document.getElementById('contact-p3').textContent = lang === 'zh'
+    ? '邮件大约需要一天的回复时间，请耐心等待。'
+    : 'Emails typically take about a day to reply.';
+  document.getElementById('contact-h2').textContent = lang === 'zh' ? '寄送地址' : 'Mailing Address';
+  document.getElementById('contact-p4').textContent = lang === 'zh'
+    ? '如果需要邮寄材料，请使用以下地址：'
+    : 'If you need to send materials, please use the following address:';
+  document.getElementById('contact-p5').textContent = lang === 'zh'
+    ? '中国 浙江省 杭州市 西湖区 浙江大学玉泉校区 浙江大学控制科学与工程学院'
+    : 'College of Control Science and Engineering, Yuquan Campus, Zhejiang University, Hangzhou, Zhejiang, China';
+  document.getElementById('contact-h3').textContent = lang === 'zh' ? '联系电话' : 'Phone Number';
+  document.getElementById('contact-p6').textContent = '+86 173 0098 2876';
+  document.getElementById('contact-p7').textContent = lang === 'zh'
+    ? '欢迎您在工作日的 9:00-21:00 (GMT+8)与我联系。'
+    : 'Feel free to contact me during weekdays from 9:00 AM to 9:00 PM (GMT+8).';
+  document.getElementById('contact-p8').textContent = lang === 'zh'
+    ? '如果您不是中国大陆的电话号码，电话可能会被拒接。请您再次拨打以示来意。'
+    : 'If you are not calling from a mainland China phone number, the call may be rejected. Please dial again to indicate your intention.';
+  document.getElementById('contact-h4').textContent = lang === 'zh' ? '社交媒体' : 'Social Media';
+  document.getElementById('contact-p9').textContent = lang === 'zh' ? '微信号：cam_fh' : 'WeChat ID: cam_fh';
+  document.getElementById('contact-p10').textContent = lang === 'zh'
+    ? '除微信以外的任何社交媒体联系方式（包括Github）不会被接受或暂未注册。'
+    : 'Any social media contact information other than WeChat (including Github) will not be accepted or is not yet registered.';
 
-    document.getElementById('download-cv').querySelector('a').textContent = '下载简历';
-    document.getElementById('last-updated').textContent = '最后更新于 ' + lastUpdatedDate.zh;
-  } else {
-    document.getElementById('title').textContent = 'My Homepage';
-    document.getElementById('user_text').textContent = 'Jiaxin Yang';
-    document.getElementById('btn-about').textContent = 'About';
-    document.getElementById('btn-projects').textContent = 'Projects';
-    document.getElementById('btn-skills').textContent = 'Skills';
-    document.getElementById('btn-download').textContent = 'Download';
-    document.getElementById('btn-contact').textContent = 'Contact';
-
-    document.getElementById('about').querySelector('h2').textContent = 'About Me';
-    document.getElementById('about').querySelector('p').textContent = 'This is some information about me.';
-
-    document.getElementById('projects').querySelector('h2').textContent = 'Projects';
-    document.getElementById('projects').querySelector('p').textContent = 'This is a list of some projects.';
-
-    document.getElementById('skills').querySelector('h2').textContent = 'Skills';
-    document.getElementById('skills').querySelector('p').textContent = 'This is my skills introduction.';
-
-    document.getElementById('download').querySelector('h2').textContent = 'Download';
-    document.getElementById('download').querySelector('p').textContent = 'You can download files related to me here.';
-    document.getElementById('download-personal-use').textContent = 'All downloaded files are for personal use only, and should not be used for commercial purposes without permission.';
-    document.getElementById('download-privacy').textContent = 'Some parts containing private information have been hidden. If you need the full version of the files, please contact me.';
-    document.getElementById('download-cv-pdf').querySelector('a').textContent = '(PDF) CV';
-    document.getElementById('download-cv-tex').querySelector('a').textContent = '(LaTeX) CV';
-    document.getElementById('download-ielts').querySelector('a').textContent = '(PDF) Scanned Copy of IELTS Score Report';
-    document.getElementById('download-academic-report').querySelector('a').textContent = '(PDF) Scanned Copy of Academic Report';
-
-    document.getElementById('contact').querySelector('h2').textContent = 'Contact';
-    document.getElementById('contact').querySelector('p').textContent = 'This is further contact info.';
-    document.getElementById('contact-h1').textContent = 'Email';
-    document.getElementById('contact-p1').textContent = 'chamxine@163.com (recommended)';
-    document.getElementById('contact-p2').textContent = 'chamxine@gmail.com';
-    document.getElementById('contact-p3').textContent = 'Emails typically take about a day to reply.';
-    document.getElementById('contact-h2').textContent = 'Mailing Address';
-    document.getElementById('contact-p4').textContent = 'If you need to send materials, please use the following address:';
-    document.getElementById('contact-p5').textContent = 'College of Control Science and Engineering, Yuquan Campus, Zhejiang University, Hangzhou, Zhejiang, China';
-    document.getElementById('contact-h3').textContent = 'Phone Number';
-    document.getElementById('contact-p6').textContent = '+86 173 0098 2876';
-    document.getElementById('contact-p7').textContent = 'Feel free to contact me during weekdays from 9:00 AM to 9:00 PM (GMT+8).';
-    document.getElementById('contact-p8').textContent = 'If your phone number is outside mainland China, the call may be rejected. If so, please try again.';
-    document.getElementById('contact-h4').textContent = 'Social Media';
-    document.getElementById('contact-p9').textContent = 'WeChat ID: cam_fh';
-    document.getElementById('contact-p10').textContent = 'Any social media other than WeChat (including Github) will not be accepted or is not registered yet.';
-
-    document.getElementById('download-cv').querySelector('a').textContent = 'Download CV';
-    document.getElementById('last-updated').textContent = 'Last updated at ' + lastUpdatedDate.en;
-  }
-
-  // 如果有更多需要切换的内容，可以继续补充
+  // 下载栏侧边更新提示
+  document.querySelector('#download-cv a').textContent = lang === 'zh' ? '下载简历' : 'Download CV';
+  document.getElementById('last-updated').textContent = lang === 'zh'
+    ? '最后更新于 ' + lastUpdatedDate.zh
+    : 'Last updated on ' + lastUpdatedDate.en;
 }
