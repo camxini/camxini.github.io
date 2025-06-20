@@ -9,7 +9,7 @@ body {
   position: fixed;
   top: 10px;
   right: 20px;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .container {
@@ -24,6 +24,32 @@ body {
   vertical-align: middle; /* 垂直居中对齐文本 */
   margin-right: 20px;      /* 图标和文字之间留点空隙 */
 }
+
+/* 返回按钮 */
+.back-button {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 0;
+  user-select: none;
+  transition: none;
+  position: relative; /* 确保不会默认叠加 */
+  z-index: 1;         /* 层级比语言切换低 */
+}
+.back-button:hover,
+.back-button:focus,
+.back-button:active {
+  background-color: white;
+  color: black;
+  border-color: black;
+  outline: none;
+}
+
+
 
 /* 左侧栏（默认横向放左边） */
 .sidebar {

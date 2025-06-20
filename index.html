@@ -5,6 +5,7 @@
   <title>camxini</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="language-toggle" id="langToggle">
     <img src="src/language.png" alt="Language" class="language-icon">
@@ -43,17 +44,27 @@
 
       <div class="section" id="about">
         <h2>About Me</h2>
-        <p>这里是关于我个人的信息。</p>
+        <p>Here is some information about me.</p>
       </div>
 
       <div class="section" id="projects" style="display:none;">
         <h2>Projects</h2>
-        <p>这里是你做过的一些项目介绍。</p>
+        <div id="project-list">
+          <p>Here are some projects I have done.</p>
+          <p id="projects-a1"><a href="javascript:void(0)" onclick="showProject()">Risk analysis of distributed energy access to the distribution network</a></p>
+        </div>
+
+        <div class="project-page" id="projects-pgc" style="display:none;">
+          <button onclick="backToList()" id="project-back" class="back-button">Back to Projects Homepage</button>
+          <h3 id="power-grid-control">Risk analysis of distributed energy access to the distribution network</h3>
+          <h4 id="projects-pgc1">2025 Shenzhen Cup Math Modeling Challenge (Problem C)</h4>
+          <h4 id="projects-pgc2">2025 Zhejiang University Math Modeling Competition (Problem A)</h4>
+        </div>
       </div>
 
       <div class="section" id="skills" style="display:none;">
         <h2>Skills</h2>
-        <p>这里是我的技能介绍。</p>
+        <p>Here are my skills.</p>
       </div>
 
       <div class="section" id="download" style="display:none;">
@@ -61,10 +72,15 @@
         <p>You can download files related to me here.</p>
         <p id="download-personal-use">All downloaded files are for personal use only, and should not be used for commercial purposes without permission.</p>
         <p id="download-privacy">Some parts containing private information have been hidden. If you need the full version of the files, please contact me.</p>
-        <p id="download-cv-pdf"><a href="src/cv.pdf" download>(PDF) CV</a></p>
-        <p id="download-cv-tex"><a href="src/cv.tex" download>(LaTeX) CV</a></p>
-        <p id="download-ielts"><a href="src/ielts.pdf" download>(PDF) Scanned Copy of IELTS Score Report</a></p>
-        <p id="download-academic-report"><a href="src/academic_report.pdf" download>(PDF) Scanned Copy of Academic Report</a></p>
+        <p id="download-academic-report-zh"><a href="src/academic_report_zh.pdf" download>Academic Report (Chinese, Scanned)</a></p>
+        <p id="download-academic-report-en"><a href="src/academic_report_en.pdf" download>Academic Report (English, Scanned)</a></p>
+        <p id="download-cv-pdf"><a href="src/cv.pdf" download>CV (Scanned)</a></p>
+        <p id="download-enrollment"><a href="src/enrollment.pdf" download>Enrollment Certificate (Scanned)</a></p>
+        <p id="download-ielts"><a href="src/ielts.pdf" download>IELTS Score Report (Scanned)</a></p>
+        <p id="download-passport"><a href="src/passport.pdf" download>Passport (Scanned)</a></p>
+        <p id="download-ps"><a href="src/ps.pdf" download>Personal Statement</a></p>
+        <p id="download-rl1"><a href="src/rl1.pdf" download>Recommendation Letter 1 (Scanned)</a></p>
+        <p id="download-rl2"><a href="src/rl2.pdf" download>Recommendation Letter 2 (Scanned)</a></p>
       </div>
 
       <div class="section" id="contact" style="display:none;">

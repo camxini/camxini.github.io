@@ -3,8 +3,8 @@ window.onload = function () {
 };
 
 const lastUpdatedDate = {
-  zh: '2025年6月16日',
-  en: '16 Jun 2025'
+  zh: '2025年6月20日',
+  en: '20 Jun 2025'
 };
 
 function showSection(id) {
@@ -15,20 +15,63 @@ function showSection(id) {
 
 // 语言切换按钮设置
 let hideMenuTimer;
+let menuVisible = false;
 
 const langToggle = document.getElementById("langToggle");
 const langMenu = document.getElementById("langMenu");
 
+// 显示/隐藏菜单的函数
+function toggleLanguageMenu(show = null) {
+  if (show === null) {
+    // 切换状态
+    menuVisible = !menuVisible;
+  } else {
+    menuVisible = show;
+  }
+  
+  langMenu.style.display = menuVisible ? "block" : "none";
+}
+
 langToggle.addEventListener("mouseenter", () => {
   clearTimeout(hideMenuTimer);
-  langMenu.style.display = "block";
+  toggleLanguageMenu(true);
 });
 
 langToggle.addEventListener("mouseleave", () => {
   hideMenuTimer = setTimeout(() => {
-    langMenu.style.display = "none";
-  }, 100); // 等 0.1 秒
+    toggleLanguageMenu(false);
+  }, 300); // 稍微延长延迟时间，避免误关闭
 });
+
+// 添加点击事件处理
+langToggle.addEventListener("click", (event) => {
+  event.stopPropagation(); // 阻止事件冒泡
+  toggleLanguageMenu(); // 切换菜单状态
+});
+
+// 添加全局点击事件，点击页面其他地方时关闭菜单
+document.addEventListener("click", (event) => {
+  if (!langToggle.contains(event.target) && menuVisible) {
+    toggleLanguageMenu(false);
+  }
+});
+
+// 防止点击菜单本身时关闭
+langMenu.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+
+// 展开项目列表函数
+function showProject() {
+  document.getElementById('project-list').style.display = 'none';
+  document.getElementById('projects-pgc').style.display = 'block';
+}
+
+// 返回项目列表函数
+function backToList() {
+  document.getElementById('project-list').style.display = 'block';
+  document.getElementById('projects-pgc').style.display = 'none';
+}
 
 // 中英文内容设置
 let currentLang = 'en';
@@ -50,7 +93,14 @@ function setLanguage(lang) {
 
   // Projects
   document.querySelector('#projects h2').textContent = lang === 'zh' ? '项目' : 'Projects';
-  document.querySelector('#projects p').textContent = lang === 'zh' ? '这里是你做过的一些项目介绍。' : 'Here are some projects I have done.';
+  document.querySelector('#projects p').textContent = lang === 'zh' ? '这里是我做过的一些项目介绍。' : 'Here are some projects I have done.';
+  document.getElementById('projects-a1').innerHTML = lang === 'zh'
+    ? '<a href="javascript:void(0)" onclick="showProject()">分布式能源接入配电网的风险分析</a>'
+    : '<a href="javascript:void(0)" onclick="showProject()">Risk analysis of distributed energy access to the distribution network</a>';
+  document.getElementById('power-grid-control').textContent = lang === 'zh' ? '分布式能源接入配电网的风险分析' : 'Risk analysis of distributed energy access to the distribution network';
+  document.getElementById('projects-pgc1').textContent = lang === 'zh' ? '2025年深圳杯数学建模挑战赛（C题）' : '2025 Shenzhen Cup Math Modeling Challenge (Problem C)';
+  document.getElementById('projects-pgc2').textContent = lang === 'zh' ? '2025年浙江大学数学建模竞赛（A题）' : '2025 Zhejiang University Math Modeling Competition (Problem A)';
+  document.getElementById('project-back').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
 
   // Skills
   document.querySelector('#skills h2').textContent = lang === 'zh' ? '技能' : 'Skills';
@@ -67,10 +117,15 @@ function setLanguage(lang) {
   document.getElementById('download-privacy').textContent = lang === 'zh'
     ? '涉及隐私信息的部分已被隐藏。如需完整版文件，请联系我。'
     : 'Some parts containing private information have been hidden. If you need the full version of the files, please contact me.';
-  document.querySelector('#download-cv-pdf a').textContent = lang === 'zh' ? '(PDF) 简历' : '(PDF) CV';
-  document.querySelector('#download-cv-tex a').textContent = lang === 'zh' ? '(LaTeX) 简历' : '(LaTeX) CV';
-  document.querySelector('#download-ielts a').textContent = lang === 'zh' ? '(PDF) 雅思成绩单扫描件' : '(PDF) Scanned Copy of IELTS Score Report';
-  document.querySelector('#download-academic-report a').textContent = lang === 'zh' ? '(PDF) 成绩单扫描件' : '(PDF) Scanned Copy of Academic Report';
+  document.querySelector('#download-academic-report-zh a').textContent = lang === 'zh' ? '中文成绩单（扫描件）' : 'Academic Report (Chinese, Scanned)';
+  document.querySelector('#download-academic-report-en a').textContent = lang === 'zh' ? '英文成绩单（扫描件）' : 'Academic Report (English, Scanned)';
+  document.querySelector('#download-cv-pdf a').textContent = lang === 'zh' ? '简历' : 'CV';
+  document.querySelector('#download-enrollment a').textContent = lang === 'zh' ? '在读证明（扫描件）' : 'Enrollment Certificate (Scanned)';
+  document.querySelector('#download-ielts a').textContent = lang === 'zh' ? '雅思成绩单（扫描件）' : 'IELTS Score Report (Scanned)';
+  document.querySelector('#download-passport a').textContent = lang === 'zh' ? '护照（扫描件）' : 'Passport (Scanned)';
+  document.querySelector('#download-ps a').textContent = lang === 'zh' ? '个人陈述' : 'Personal Statement';
+  document.querySelector('#download-rl1 a').textContent = lang === 'zh' ? '推荐信1（扫描件）' : 'Recommendation Letter 1 (Scanned)';
+  document.querySelector('#download-rl2 a').textContent = lang === 'zh' ? '推荐信2（扫描件）' : 'Recommendation Letter 2 (Scanned)';
 
   // Contact
   document.querySelector('#contact h2').textContent = lang === 'zh' ? '联系' : 'Contact';
@@ -108,4 +163,6 @@ function setLanguage(lang) {
   document.getElementById('last-updated').textContent = lang === 'zh'
     ? '最后更新于 ' + lastUpdatedDate.zh
     : 'Last updated on ' + lastUpdatedDate.en;
+
+  toggleLanguageMenu(false); // 切换语言后关闭菜单
 }
