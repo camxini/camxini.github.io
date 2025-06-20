@@ -51,7 +51,8 @@
         <h2>Projects</h2>
         <div id="project-list">
           <p>Here are some projects I have done.</p>
-          <p id="projects-a1"><a href="javascript:void(0)" onclick="showProject()">Risk analysis of distributed energy access to the distribution network</a></p>
+          <p id="projects-a1"><a href="javascript:void(0)" onclick="showProject('projects-pgc')">Risk analysis of distributed energy access to the distribution network</a></p>
+          <p id="projects-a2"><a href="javascript:void(0)" onclick="showProject('projects-bc')">An infrared obstacle avoidance car with two Bluetooth sensors for communication</a></p>
         </div>
 
         <div class="project-page" id="projects-pgc" style="display:none;">
@@ -61,6 +62,12 @@
           <h4 id="projects-pgc2">2025 Zhejiang University Math Modeling Competition (Problem A)</h4>
           <p id="project-pgc3">You can visit <a href="https://github.com/camxini/camxinibot">https://github.com/camxini/camxinibot</a> for more information.</p>
         </div>
+
+        <div class="project-page" id="projects-bc" style="display:none;">
+          <button onclick="backToList()" id="project-back" class="back-button">Back to Projects Homepage</button>
+          <h3 id="bluetooth-car">An infrared obstacle avoidance car with two Bluetooth sensors for communication</h3>
+        </div>
+
       </div>
 
       <div class="section" id="skills" style="display:none;">

@@ -61,16 +61,31 @@ langMenu.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 
-// 展开项目列表函数
-function showProject() {
+// 展开项目详情页面
+function showProject(projectId) {
+  // 隐藏项目列表
   document.getElementById('project-list').style.display = 'none';
-  document.getElementById('projects-pgc').style.display = 'block';
+  
+  // 隐藏所有项目详情页面
+  const projectPages = document.querySelectorAll('.project-page');
+  projectPages.forEach(page => {
+    page.style.display = 'none';
+  });
+  
+  // 显示指定的项目详情
+  document.getElementById(projectId).style.display = 'block';
 }
 
 // 返回项目列表函数
 function backToList() {
+  // 显示项目列表
   document.getElementById('project-list').style.display = 'block';
-  document.getElementById('projects-pgc').style.display = 'none';
+  
+  // 隐藏所有项目详情页面
+  const projectPages = document.querySelectorAll('.project-page');
+  projectPages.forEach(page => {
+    page.style.display = 'none';
+  });
 }
 
 // 中英文内容设置
@@ -95,8 +110,11 @@ function setLanguage(lang) {
   document.querySelector('#projects h2').textContent = lang === 'zh' ? '项目' : 'Projects';
   document.querySelector('#projects p').textContent = lang === 'zh' ? '这里是我做过的一些项目介绍。' : 'Here are some projects I have done.';
   document.getElementById('projects-a1').innerHTML = lang === 'zh'
-    ? '<a href="javascript:void(0)" onclick="showProject()">分布式能源接入配电网的风险分析</a>'
-    : '<a href="javascript:void(0)" onclick="showProject()">Risk analysis of distributed energy access to the distribution network</a>';
+    ? '<a href="javascript:void(0)" onclick="showProject(\'projects-pgc\')">分布式能源接入配电网的风险分析</a>'
+    : '<a href="javascript:void(0)" onclick="showProject(\'projects-pgc\')">Risk analysis of distributed energy access to the distribution network</a>';
+  document.getElementById('projects-a2').innerHTML = lang === 'zh'
+    ? '<a href="javascript:void(0)" onclick="showProject(\'projects-bc\')">一个带有两块蓝牙传感器通信的红外避障小车</a>'
+    : '<a href="javascript:void(0)" onclick="showProject(\'projects-bc\')">An infrared obstacle avoidance car with two Bluetooth sensors for communication</a>';
   document.getElementById('power-grid-control').textContent = lang === 'zh' ? '分布式能源接入配电网的风险分析' : 'Risk analysis of distributed energy access to the distribution network';
   document.getElementById('project-back').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
   document.getElementById('projects-pgc1').textContent = lang === 'zh' ? '2025年深圳杯数学建模挑战赛（C题）' : '2025 Shenzhen Cup Math Modeling Challenge (Problem C)';
@@ -104,6 +122,7 @@ function setLanguage(lang) {
   document.getElementById('project-pgc3').innerHTML = lang === 'zh'
     ? '您可以访问 <a href="https://github.com/camxini/camxinibot">https://github.com/camxini/camxinibot</a> 获取更多信息。'
     : 'You can visit <a href="https://github.com/camxini/camxinibot">https://github.com/camxini/camxinibot</a> for more information.';
+  document.querySelector('#bluetooth-car').textContent = lang === 'zh' ? '一个带有两块蓝牙传感器通信的红外避障小车' : 'An infrared obstacle avoidance car with two Bluetooth sensors for communication';
 
   // Skills
   document.querySelector('#skills h2').textContent = lang === 'zh' ? '技能' : 'Skills';
