@@ -98,9 +98,12 @@ function setLanguage(lang) {
     ? '<a href="javascript:void(0)" onclick="showProject()">分布式能源接入配电网的风险分析</a>'
     : '<a href="javascript:void(0)" onclick="showProject()">Risk analysis of distributed energy access to the distribution network</a>';
   document.getElementById('power-grid-control').textContent = lang === 'zh' ? '分布式能源接入配电网的风险分析' : 'Risk analysis of distributed energy access to the distribution network';
+  document.getElementById('project-back').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
   document.getElementById('projects-pgc1').textContent = lang === 'zh' ? '2025年深圳杯数学建模挑战赛（C题）' : '2025 Shenzhen Cup Math Modeling Challenge (Problem C)';
   document.getElementById('projects-pgc2').textContent = lang === 'zh' ? '2025年浙江大学数学建模竞赛（A题）' : '2025 Zhejiang University Math Modeling Competition (Problem A)';
-  document.getElementById('project-back').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
+  document.getElementById('project-pgc3').innerHTML = lang === 'zh'
+    ? '您可以访问 <a href="https://github.com/camxini/camxinibot">https://github.com/camxini/camxinibot</a> 获取更多信息。'
+    : 'You can visit <a href="https://github.com/camxini/camxinibot">https://github.com/camxini/camxinibot</a> for more information.';
 
   // Skills
   document.querySelector('#skills h2').textContent = lang === 'zh' ? '技能' : 'Skills';
