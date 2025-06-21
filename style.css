@@ -107,6 +107,7 @@ body {
   flex-grow: 1;
   padding: 20px;
   margin-left: 400px;
+  padding-right: 30px;
 }
 
 /* 菜单按钮组 */

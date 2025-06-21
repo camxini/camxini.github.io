@@ -113,18 +113,37 @@ function setLanguage(lang) {
     ? '<a href="javascript:void(0)" onclick="showProject(\'projects-pgc\')">分布式能源接入配电网的风险分析</a>'
     : '<a href="javascript:void(0)" onclick="showProject(\'projects-pgc\')">Risk analysis of distributed energy access to the distribution network</a>';
   document.getElementById('projects-a2').innerHTML = lang === 'zh'
-    ? '<a href="javascript:void(0)" onclick="showProject(\'projects-bc\')">一个带有两块蓝牙传感器通信的红外避障小车</a>'
-    : '<a href="javascript:void(0)" onclick="showProject(\'projects-bc\')">An infrared obstacle avoidance car with two Bluetooth sensors for communication</a>';
+    ? '<a href="javascript:void(0)" onclick="showProject(\'projects-bc\')">一个带有两块蓝牙模块通信的红外避障小车</a>'
+    : '<a href="javascript:void(0)" onclick="showProject(\'projects-bc\')">An infrared obstacle avoidance car with two Bluetooth modules for communication</a>';
   document.getElementById('power-grid-control').textContent = lang === 'zh' ? '分布式能源接入配电网的风险分析' : 'Risk analysis of distributed energy access to the distribution network';
   document.getElementById('project-back').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
   document.getElementById('projects-pgc1').textContent = lang === 'zh' ? '2025年深圳杯数学建模挑战赛（C题）' : '2025 Shenzhen Cup Math Modeling Challenge (Problem C)';
   document.getElementById('projects-pgc2').textContent = lang === 'zh' ? '2025年浙江大学数学建模竞赛（A题）' : '2025 Zhejiang University Math Modeling Competition (Problem A)';
-  document.getElementById('project-pgc3').innerHTML = lang === 'zh'
+  document.getElementById('projects-pgc3').innerHTML = lang === 'zh'
     ? '您可以访问 <a href="https://github.com/camxini/camxinibot">https://github.com/camxini/camxinibot</a> 获取更多信息。'
     : 'You can visit <a href="https://github.com/camxini/camxinibot">https://github.com/camxini/camxinibot</a> for more information.';
-  document.querySelector('#bluetooth-car').textContent = lang === 'zh' ? '一个带有两块蓝牙传感器通信的红外避障小车' : 'An infrared obstacle avoidance car with two Bluetooth sensors for communication';
-
-  // Skills
+  document.getElementById('bluetooth-car').textContent = lang === 'zh' ? '一个带有两块蓝牙传感器通信的红外避障小车' : 'An infrared obstacle avoidance car with two Bluetooth sensors for communication';
+  document.getElementById('projects-bc1').textContent = lang === 'zh'
+    ? '这是一个由Arduino UNO控制的避障小车，车头装有四个红外传感器，实现以下避障逻辑：'
+    : 'This is an obstacle avoidance car controlled by Arduino UNO. The front of the car is equipped with four infrared sensors, which realize the following obstacle avoidance logic:';
+  document.getElementById('projects-bc2').textContent = lang === 'zh'
+    ? '1. 前方障碍：急停。'
+    : '1. Obstacle ahead: Emergency stop.'
+  document.getElementById('projects-bc3').textContent = lang === 'zh'
+    ? '2. 左/右侧障碍：短暂向反方向偏转后急停。'
+    : '2. Obstacle on the left/right: A short deflection in the opposite direction followed by an emergency stop.';
+  document.getElementById('projects-bc4').textContent = lang === 'zh'
+    ? '3. 静止时逼近的障碍物：主动后退。'
+    : '3. Approaching obstacle when stationary: Actively reverse.';
+  document.getElementById('projects-bc5').textContent = lang === 'zh'
+    ? '小车通过双蓝牙模块接受来自电脑的无线通信指令，此外，小车配备一块OLED显示屏来实时显示关键信息。'
+    : 'The car receives wireless motion commands from the computer through the dual Bluetooth module system. In addition, the trolley is equipped with an OLED display for real-time display of key info.';
+  document.getElementById('projects-bc6').innerHTML = lang === 'zh'
+    ? '您可以访问 <a href="https://github.com/camxini/mess-ball">https://github.com/camxini/mess-ball</a> 获取更多信息。'
+    : 'You can visit <a href="https://github.com/camxini/mess-ball">https://github.com/camxini/mess-ball</a> for more information.';
+  
+  
+    // Skills
   document.querySelector('#skills h2').textContent = lang === 'zh' ? '技能' : 'Skills';
   document.querySelector('#skills p').textContent = lang === 'zh' ? '这里是我的技能介绍。' : 'This is a description of my skills.';
 
