@@ -50,9 +50,12 @@
       <div class="section" id="projects" style="display:none;">
         <h2>Projects</h2>
         <div id="project-list">
-          <p>Here are some projects I have done.</p>
+          <p>Here are some projects I have done. You can click for details.</p>
           <p id="projects-a1"><a href="javascript:void(0)" onclick="showProject('projects-pgc')">Risk analysis of distributed energy access to the distribution network</a></p>
           <p id="projects-a2"><a href="javascript:void(0)" onclick="showProject('projects-bc')">An infrared obstacle avoidance car with two Bluetooth sensors for communication</a></p>
+          <p id="projects-a3"><a href="javascript:void(0)" onclick="showProject('projects-cb')">Mobile robot simulation: Path planning and obstacle avoidance</a></p>
+
+          <p id="projects-more">For more projects, please visit my Github homepage: <a href="https://github.com/camxini">https://github.com/camxini</a>.</p>
         </div>
 
         <div class="project-page" id="projects-pgc" style="display:none;">
@@ -72,6 +75,11 @@
           <p id="projects-bc4">3. Approaching obstacle when stationary: Actively reverse.</p>
           <p id="projects-bc5">The car receives wireless motion commands from the computer through the dual Bluetooth module system. In addition, the trolley is equipped with an OLED display for real-time display of key info.</p>
           <p id="projects-bc6">You can visit <a href="https://github.com/camxini/mess-ball">https://github.com/camxini/mess-ball</a> for more information.</p>
+        </div>
+
+        <div class="project-page" id="projects-cb" style="display:none;">
+          <button onclick="backToList()" id="project-back" class="back-button">Back to Projects Homepage</button>
+          <h3 id="camxinibot">Mobile robot simulation: Path planning and obstacle avoidance</h3>
         </div>
 
       </div>
