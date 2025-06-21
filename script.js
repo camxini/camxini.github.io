@@ -110,20 +110,23 @@ function setLanguage(lang) {
   document.querySelector('#projects h2').textContent = lang === 'zh' ? '项目' : 'Projects';
   document.querySelector('#projects p').textContent = lang === 'zh' ? '这里是我做过的一些项目介绍，点击查看详细信息。' : 'Here are some projects I have done. You can click for details.';
   document.getElementById('projects-a1').innerHTML = lang === 'zh'
-    ? '<a href="javascript:void(0)" onclick="showProject(\'projects-pgc\')">分布式能源接入配电网的风险分析</a>'
-    : '<a href="javascript:void(0)" onclick="showProject(\'projects-pgc\')">Risk analysis of distributed energy access to the distribution network</a>';
+    ? '<a href="javascript:void(0)" onclick="showProject(\'projects-pgc\')">数学建模：分布式能源接入配电网的风险分析</a>'
+    : '<a href="javascript:void(0)" onclick="showProject(\'projects-pgc\')">Math modeling: Risk analysis of distributed energy access to the distribution network</a>';
   document.getElementById('projects-a2').innerHTML = lang === 'zh'
     ? '<a href="javascript:void(0)" onclick="showProject(\'projects-bc\')">一个带有两块蓝牙模块通信的红外避障小车</a>'
     : '<a href="javascript:void(0)" onclick="showProject(\'projects-bc\')">An infrared obstacle avoidance car with two Bluetooth modules for communication</a>';
   document.getElementById('projects-a3').innerHTML = lang === 'zh'
     ? '<a href="javascript:void(0)" onclick="showProject(\'projects-cb\')">移动机器人仿真：轨迹规划和避障</a>'
     : '<a href="javascript:void(0)" onclick="showProject(\'projects-cb\')">Mobile Robot Simulation: Path Planning and Obstacle Avoidance</a>';
+  document.getElementById('projects-a4').innerHTML = lang === 'zh'
+    ? '<a href="javascript:void(0)" onclick="showProject(\'projects-srtp\')">基于ROS的AGV建图与自主导航</a>'
+    : '<a href="javascript:void(0)" onclick="showProject(\'projects-srtp\')">AGV mapping and autonomous navigation based on ROS</a>';
   document.getElementById('projects-more').innerHTML = lang === 'zh'
     ? '更多项目，请前往我的Github主页：<a href="https://github.com/camxini">https://github.com/camxini</a>.'
     : 'For more projects, please visit my GitHub homepage: <a href="https://github.com/camxini">https://github.com/camxini</a>.';
   
-  document.getElementById('power-grid-control').textContent = lang === 'zh' ? '分布式能源接入配电网的风险分析' : 'Risk analysis of distributed energy access to the distribution network';
-  document.getElementById('project-back').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
+  document.getElementById('power-grid-control').textContent = lang === 'zh' ? '数学建模：分布式能源接入配电网的风险分析' : 'Math modeling: Risk analysis of distributed energy access to the distribution network';
+  document.getElementById('project-back-pgc').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
   document.getElementById('projects-pgc1').textContent = lang === 'zh' ? '2025年深圳杯数学建模挑战赛（C题）' : '2025 Shenzhen Cup Math Modeling Challenge (Problem C)';
   document.getElementById('projects-pgc2').textContent = lang === 'zh' ? '2025年浙江大学数学建模竞赛（A题）' : '2025 Zhejiang University Math Modeling Competition (Problem A)';
   document.getElementById('projects-pgc3').innerHTML = lang === 'zh'
@@ -131,6 +134,7 @@ function setLanguage(lang) {
     : 'You can visit <a href="https://github.com/camxini/camxinibot">https://github.com/camxini/camxinibot</a> for more information.';
   
   document.getElementById('bluetooth-car').textContent = lang === 'zh' ? '一个带有两块蓝牙传感器通信的红外避障小车' : 'An infrared obstacle avoidance car with two Bluetooth sensors for communication';
+  document.getElementById('project-back-bc').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
   document.getElementById('projects-bc1').textContent = lang === 'zh'
     ? '这是一个由Arduino UNO控制的避障小车，车头装有四个红外传感器，实现以下避障逻辑：'
     : 'This is an obstacle avoidance car controlled by Arduino UNO. The front of the car is equipped with four infrared sensors, which realize the following obstacle avoidance logic:';
@@ -151,8 +155,10 @@ function setLanguage(lang) {
     : 'You can visit <a href="https://github.com/camxini/mess-ball">https://github.com/camxini/mess-ball</a> for more information.';
   
   document.getElementById('camxinibot').textContent = lang === 'zh' ? '移动机器人仿真：轨迹规划和避障' : 'Mobile Robot Simulation: Path Planning and Obstacle Avoidance';
-  
+  document.getElementById('project-back-cb').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
 
+  document.getElementById('srtp').textContent = lang === 'zh' ? '基于ROS的AGV建图与自主导航' : 'AGV Mapping and Autonomous Navigation based on ROS';
+  document.getElementById('project-back-srtp').textContent = lang === 'zh' ? '返回项目首页' : 'Back to Projects Homepage';
 
     // Skills
   document.querySelector('#skills h2').textContent = lang === 'zh' ? '技能' : 'Skills';
