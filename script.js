@@ -189,8 +189,8 @@ function setLanguage(lang) {
   document.querySelector('#contact h2').textContent = lang === 'zh' ? '联系' : 'Contact';
   document.querySelector('#contact > p').textContent = lang === 'zh' ? '这里是进一步的联系方式。' : 'This is further contact info.';
   document.getElementById('contact-h1').textContent = lang === 'zh' ? '邮件' : 'Email';
-  document.getElementById('contact-p1').textContent = lang === 'zh' ? 'chamxine@163.com（建议）' : 'chamxine@163.com (recommended)';
-  document.getElementById('contact-p2').textContent = 'chamxine@gmail.com';
+  document.getElementById('contact-p1').textContent = lang === 'zh' ? 'chamxine@gmail.com（建议）' : 'chamxine@gmail.com (recommended)';
+  document.getElementById('contact-p2').textContent = 'hello@camxini.com';
   document.getElementById('contact-p3').textContent = lang === 'zh'
     ? '邮件大约需要一天的回复时间，请耐心等待。'
     : 'Emails typically take about a day to reply.';
