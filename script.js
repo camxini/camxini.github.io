@@ -178,7 +178,7 @@ function setLanguage(lang) {
   document.querySelector('#download-academic-report-zh a').textContent = lang === 'zh' ? '中文成绩单（扫描件）' : 'Academic Report (Chinese, Scanned)';
   document.querySelector('#download-academic-report-en a').textContent = lang === 'zh' ? '英文成绩单（扫描件）' : 'Academic Report (English, Scanned)';
   document.querySelector('#download-cv-pdf a').textContent = lang === 'zh' ? '简历' : 'CV';
-  document.querySelector('#download-enrollment a').textContent = lang === 'zh' ? '在读证明（扫描件）' : 'Enrollment Certificate (Scanned)';
+  document.querySelector('#download-sc a').textContent = lang === 'zh' ? '在读证明（扫描件）' : 'Studying Certificate (Scanned)';
   document.querySelector('#download-ielts a').textContent = lang === 'zh' ? '雅思成绩单（扫描件）' : 'IELTS Score Report (Scanned)';
   document.querySelector('#download-passport a').textContent = lang === 'zh' ? '护照（扫描件）' : 'Passport (Scanned)';
   document.querySelector('#download-ps a').textContent = lang === 'zh' ? '个人陈述' : 'Personal Statement';
