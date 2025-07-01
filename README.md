@@ -1,5 +1,3 @@
-Hi everyone, welcome to my website's HTML repository.
+camxini.github.io
 
-If any advice, please email at chamxine@163.com or chamxine@gmail.com.
-
-My sincere appreciation for your attention.
+http://camxini.com
