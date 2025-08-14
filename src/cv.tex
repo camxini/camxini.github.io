@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[a4paper,margin=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+% Fonts and style
+\usepackage{newtxtext,newtxmath}
+% \renewcommand{\familydefault}{\sfdefault}
+% \setlist[itemize]{nosep}
+\pagestyle{empty}
+\setstretch{1.15}
+\setlist[itemize]{leftmargin=*}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Jiaxin Yang}}\\
+    \vspace{2mm}
+    +86 17300982876 \quad \href{mailto:chamxine@gmail.com}{chamxine@gmail.com} \\
+    Github Homepage: \href{https://github.com/camxini}{github.com/camxini} \\
+    % Personal Homepage: \href{http://www.camxini.com}{www.camxini.com} \\
+\end{center}
+
+\vspace{2mm}
+
+\section*{Education}
+\textbf{Zhejiang University}, Hangzhou, China \hfill \textit{Aug 2022 -- Present} \\
+\textbf{Bachelor of Engineering in Automation (Control Science and Engineering)} \hfill GPA: 3.67/4.00 \\
+Relevant coursework: Robot Modeling and Control, Principles of Automatic Control, Modern Control System, Linear Algebra, Calculus, Probability
+
+\section*{Projects and Experience}
+\textbf{Trajectory planning AGV} \\
+\textit{Phase I: ROS1-based trajectory planning AGV} \hfill \textit{Mar 2024 -- May 2025} \\
+\textit{FabLab, College of Control Science and Engineering, Zhejiang University} \\
+\textit{Team Leader, 3 members and a supervisor} \\
+\begin{itemize}
+    \item Spearheaded the full-stack AGV goods transfer system, covering hardware (motor drivers, Raspberry Pi, laser radar) and ROS-noetic-based software (SLAM via hector-slam and trajectory planning via A*).
+    \item Delivered a robust mobile robot prototype capable of real-time environment mapping and autonomous navigation, achieving a 'Good' evaluation (top 12\%) in the final report.
+\end{itemize}
+\textit{Phase II: ROS2-based Full System Migration and Optimization} \hfill \textit{Jul 2025 -- Present} \\
+\textit{Team Leader, 3 members} \\
+\begin{itemize}
+    \item Migrating the AGV system to ROS 2 Jazzy, restructuring software modules in Python and C++ with improved ROS 2 practices.
+    \item Optimizing encoder motor rotation with P control, and re-implementing SLAM using slam-toolbox.
+    \item Enhancing communication robustness via launch configuration and TF tree structure for better scalability.
+\end{itemize}
+
+\noindent\textbf{Risk Analysis of Distributed Energy Integration into Distribution Networks} \hfill \textit{May 2025 -- Present} \\
+\textit{Team Leader, 4 members} \\
+\begin{itemize}
+    \item Led the development of mathematical models (Monte Carlo simulation, AC power flow and Newton-Raphson) to quantify lostload and overload risks in a 62-node distribution network with distributed PV integration.
+    \item Created photovoltaic generation curve models to accurately simulate PV output variability for risk assessment.
+    \item Qualified for the \textbf{National Final Round} of Shenzhen Cup 2025 (Problem C).
+\end{itemize}
+
+\noindent\textbf{Mobile Robot Simulation: Path Planning and Obstacle Avoidance} \hfill \textit{Feb 2025 -- Mar 2025} \\
+\textit{Participant, 3 members} \\
+\begin{itemize}
+    \item Implemented a Dynamic Window Approach (DWA) algorithm in Python for real-time local obstacle avoidance.
+    \item Integrated A* algorithm for global path planning, enabling simulated robot to navigate complex environments (11 static, 5 dynamic obstacles) with a 100\% success rate across 200+ simulation trials and ranked 1st among 10+ teams.
+    \item Explored an innovative "drift-style" maneuver, achieving stable control even without explicit velocity or acceleration constraints, demonstrating algorithmic robustness and adaptability in loosely modeled environments.
+\end{itemize}
+
+\section*{Skills}
+\begin{itemize}
+    \item \textbf{Programming:} C (Experienced), Python, MATLAB, VHDL, Ladder Logic (LD)
+    \item \textbf{Tools \& Frameworks:} ROS (ROS1/ROS2, Experienced), OpenCV, RViz, SLAM (gmapping, hector-slam and slam-toolbox), Git
+    \item \textbf{Hardware:} Arduino, Raspberry Pi, FPGA Board, STM32
+    \item \textbf{Algorithms:} A*, DWA (Dynamic Window Approach), PRM (Probabilistic Roadmap), PID Control, Greedy Algorithm, Monte Carlo Simulation, Power Flow Analysis
+    \item \textbf{Languages:} English (IELTS 7.0), Chinese, Mongolian
+\end{itemize}
+
+\section*{Awards}
+\begin{itemize}
+    \item \textbf{Qualified for National Level (2025)}, Shenzhen Cup (China University Student Mathematical Modeling Summer Camp) - Problem C
+    \item \textbf{Second Prize (University Level, 2025) and Qualified for Provincial Level}, 8th China University Robotics Innovation Competition
+    \item \textbf{Second Prize (University Level, 2024)}, "Zhongkong Cup" UAV Competition (Zhejiang Province)
+    \item \textbf{Third Prize (University Level, 2025)}, Zhejiang University Mathematical Modeling Competition - Problem A
+    \item \textbf{Outstanding Student Cadre (2023-2025)}, Zhejiang University
+\end{itemize}
+
+\section*{Extracurricular Activities}
+\begin{itemize}
+    \item \textbf{Participant}, Summer Exchange Program in NUS, NTU, SUTD and A*STAR, Singapore, 2024
+    \item \textbf{Class League Secretary}, Zhejiang University, 2024 -- Present
+    \item \textbf{Student Leader}, 5-Day visit for Shanghai Electric and ABB Robotics, Shanghai, 2024
+    \item \textbf{Vice Captain}, Social Research Program in Beijing-Tianjin Region, 2023
+    \item \textbf{Volunteer}, 3rd National Forum on Robotics Engineering Education, 2023
+    \item \textbf{Lead Vocalist}, New Year Gala of College of Control Science and Engineering, 2023
+    \item \textbf{Member}, ZJU Smartlink AIoT Club (Partnered with Huawei)
+    \item \textbf{Member}, ZJU Robotics Association
+
+\end{itemize}
+
+\section*{References}
+\begin{itemize}
+    \item Prof. Qinyuan Ren, College of Control Science and Engineering, Zhejiang University \\
+    Email: \href{mailto:renqinyuan@zju.edu.cn}{renqinyuan@zju.edu.cn} \\
+    Role: Instructor of "Robot Modeling and Control"; leading teacher of Singapore summer exchange program
+
+    \item Dr. Dongxia Wang, Distinguished Researcher, College of Control Science and Engineering, ZJU \\
+    Email: \href{mailto:dxwang@zju.edu.cn}{dxwang@zju.edu.cn} \\
+    Role: Class advisor
+\end{itemize}
+
+\end{document}
